@@ -24,5 +24,8 @@ const userSchema = Schema({
     message:"Must be at least 16 to enter." 
   },
 });
+//creating an index for the name
+userSchema.index({ name: 1, type: 1});
+
 
 module.exports = model('User', userSchema);
